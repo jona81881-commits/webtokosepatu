@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand-navy: #283583;
+  --color-brand-blue: #4476DB;
+  --color-brand-sky: #9ACDE0;
+  --color-brand-mist: #D3E8E6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #F6FAFA;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #283583;
+}
+
+hr {
+    border: 0;
+    background: #9ACDE0;
+    height: 1px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    color: #fff;
+    background: #283583;
+    box-shadow: 0 6px 24px rgba(40, 53, 131, 0.25);
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+header .wrap::after {
+    display: none;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #9ACDE0, #4476DB);
+    box-shadow: 0 6px 16px rgba(68, 118, 219, 0.45);
+}
+
+header .judul {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+}
+
+header .deskripsi {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #9ACDE0;
+    margin-top: 3px;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 1520px;
+    margin: auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.ikon {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
+nav.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.menu ul li.pemisah {
+    width: 1px;
+    height: 28px;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+nav.menu ul a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+nav.menu ul a:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+nav.menu ul a.active {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+nav.menu ul a.admin-link {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+nav.menu ul a.admin-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-toggle {
+    display: none;
+    background: rgba(255, 255, 255, 0.14);
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #4476DB;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 999px;
+}
+
+.filterbar {
+    background: rgba(211, 232, 230, 0.55);
+    border-bottom: 1px solid rgba(154, 205, 224, 0.45);
+    padding: 18px 0;
+}
+
+.filterbar .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.filterbar .wrap::after {
+    display: none;
+}
+
+.blog {
+    width: 100%;
+}
+
+.conteudo {
+    padding: 0;
+    margin: 32px 0;
+    background: transparent;
+}
+
+.footer {
+    padding: 28px 0;
+    clear: both;
+    width: 100%;
+    margin-top: 40px;
+    background: #283583;
+    color: #D3E8E6;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: whitesmoke;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    nav.menu {
+        display: none;
+        width: 100%;
+    }
+    nav.menu.open {
+        display: block;
+    }
+    nav.menu ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding-bottom: 6px;
+    }
+    nav.menu ul li.pemisah {
+        display: none;
+    }
+    .filterbar .wrap {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .wrap {
+        width: 100%;
+        padding: 0 5%;
+    }
+    .blog {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .deskripsi {
+        display: none;
+    }
+}

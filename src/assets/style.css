@@ -1,0 +1,172 @@
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+.header {
+    background-color: #283583;
+    height: 100px;
+    width: 100%;
+}
+
+.header .logo {
+    float: left;
+    width: 25%;
+}
+
+.header .logo h1 {
+    margin: 30px 15px;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.header .nav {
+    width: 75%;
+    float: left;
+}
+
+.header .nav ul {
+    float: right;
+    margin-right: 15px;
+    margin-top: 38px;
+}
+
+.header .nav ul li {
+    float: left;
+    font-size: 16px;
+    margin-left: 15px;
+    display: block;
+}
+
+.header .nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.header .nav ul li a:hover {
+    color: #9ACDE0;
+    text-decoration: underline;
+}
+
+.header .nav ul li a:active {
+    color: #FFD54F;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+.wrapper {
+    background-color: #D3E8E6;
+    float: left;
+    width: 100%;
+}
+
+.admin-sidebar {
+    background-color: #283583;
+    width: 25%;
+    min-height: 450px;
+    float: left;
+}
+
+.admin-sidebar ul li a {
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+
+.admin-sidebar ul li a:hover {
+    background-color: #4476DB;
+}
+
+.content {
+    background-color: #FFFFFF;
+    width: 75%;
+    float: right;
+}
+
+.admin-footer {
+    background-color: #283583;
+    color: #FFFFFF;
+    clear: both;
+    text-align: center;
+    padding: 15px;
+}
+
+.container::after,
+.header .nav ul::after,
+.wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+
+    .header .logo,
+    .header .nav {
+        width: 100%;
+        float: none;
+    }
+
+    .header .logo h1 {
+        margin: 15px;
+    }
+
+    .header .nav ul {
+        float: none;
+        margin: 0 0 10px 0;
+        padding-left: 15px;
+    }
+
+    .header .nav ul li {
+        margin: 0 15px 8px 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .admin-sidebar {
+        display: none;
+        width: 100%;
+        float: none;
+        min-height: 0;
+    }
+
+    .admin-sidebar.open {
+        display: block;
+    }
+
+    .content {
+        width: 100%;
+        float: none;
+    }
+}

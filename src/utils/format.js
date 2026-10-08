@@ -1,0 +1,1 @@
+export const formatRupiah = (n) => "Rp " + n.toLocaleString("id-ID");

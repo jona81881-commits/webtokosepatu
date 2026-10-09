@@ -8,7 +8,7 @@ export default function Dashboard() {
   const category = searchParams.get("category") || "all";
 
   const filtered = products.filter((p) => {
-    const matchName = p.name.toLowerCase().includes(q.toLowerCase());
+   const matchName = `${p.name} ${p.category_name}`.toLowerCase().includes(q.toLowerCase());
     const matchCat = category === "all" || p.category === Number(category);
     return matchName && matchCat;
   });
